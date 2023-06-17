@@ -5,7 +5,7 @@ const darkModeSwitch = document.getElementById("switch-check");
 
 
 messagesBar.addEventListener('keypress', event => {
-  if (event.keyCode == 13) {
+  if (event.keyCode == 13 && messagesBar.value.length != 0) {
     const d = new Date();
     let hour = d.getHours();
     let minutes = d.getMinutes()
@@ -38,7 +38,11 @@ messagesBar.addEventListener('keypress', event => {
     box.append(message)
 
     messagesBar.value = ""
+
+    
     ding.play();
+    
+     image.scrollIntoView(false);
   }
 })
 
