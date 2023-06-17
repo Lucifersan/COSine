@@ -1,78 +1,154 @@
-*{
-    margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-    font-family: 'gg sans', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: 'gg sans', sans-serif;
+}
+
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  overflow: auto;
 }
 
 @import url('https://fonts.cdnfonts.com/css/gg-sans-2');
 
-.container{
-    display: flex;
-    width:100%;
+.container {
+  display: flex;
+  width: 100%;
 }
 
-.profile-container{
-    background-color: #2b2d31;
-    width:20%
+.profile-container {
+  background-color: #2b2d31;
+  width: 20%;
+  height: 100vh;
+  position: fixed;
+  color:gray;
+  font-family: 'gg sans', sans-serif;
+  font-weight: 600;
 }
 
-.profile{
-    display:flex;
-    align-items: center;
-    padding:.5rem;
+.profile {
+  display: flex;
+  align-items: center;
+  padding: .4rem;
+  margin: 1vh;
 }
 
-.time{
-    font-weight: 400;
-    color:#949ba4;
-    font-size: smaller;
+.time {
+  font-weight: 400;
+  color: #949ba4;
+  font-size: smaller;
 }
 
-.icon-img{
-    width:2.5rem;
-    border-radius: 50%;
-    padding:.5rem;
+.icon-img {
+  width: 2.5rem;
+  border-radius: 50%;
+  padding: .5rem;
 }
 
-.profile:hover{
-    background-color: #313338;
+.profile:hover {
+  background-color: #313338;
 }
 
-.messages:hover{
-    background-color: #2b2d31;
+.messages:hover {
+  background-color: #2b2d31;
 }
 
-.profile-name{
-    color:#f2f2f6;
-    
-    font-weight:600;
+.profile-name {
+  color: #f2f2f6;
+
+  font-weight: 600;
 }
 
-.messages-container{
-    background-color: #313338;
-    width:80%;
-    display: flex;
-    flex-direction: column;
-    
-}
-.messages{
-    display: flex;
-    padding:.5rem;
-    align-items: center;
-
+.profilebottom {
+  background-color: #232428; 
+  height: 8vh;
+  width: 100%;
+  position: absolute;
+  bottom:0;
+  left:0;
 }
 
-.message{
-    color:#dcdee1;
+#messages-container {
+  background-color: #313338;
+  width: 85%;
+  padding-left: 20%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.messages {
+  margin-top: 3%;
+  display: flex;
+  padding: .5rem;
+  align-items: center;
+}
+.message {
+  color: #dcdee1;
 
 }
 
-.name-and-content{
-    display: flex;
-    flex-direction: column;
-    gap:.25rem;
+.headerbar {
+  position: fixed;
+  width: 100%;
+  background-color: #313338;
+  justify-content: flex-start;
+  padding-left: 3%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin-left: 20%;
+}
+
+.headerbar p {
+  display: inline-flex;
+  padding: center;
+  justify-content: center;
+}
+
+.name-and-content {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+.messages-bar {
+  background-color: #2b2d31;
+  height:4rem;
+  width: 80%;
+  position: absolute;
+  bottom:0;
+}
+
+.messagesbar {
+  width: 95%;
+  height: 1.5rem;
+  background-color:#383a40;
+  border: 0;
+  margin:1vh;
+  padding: 1vh;
+  
+  caret-color: white;
+  color: white;
+}
+
+input:focus {
+  outline:none;
+}
+
+.nohover {
+  pointer-events:none;
+}
+
+.text {
+  padding-top: 1vh;
+  padding-left:1vh;
 }
