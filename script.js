@@ -1,7 +1,7 @@
 const messagesContainer = document.getElementById("messages-container")
 const messagesBar = document.getElementById('messagesbar');
 const ding = new Audio("ding.mp3");
-const switch = document.getElementById("switch-check")
+const darkModeSwitch = document.getElementById("switch-check");
 
 
 messagesBar.addEventListener('keypress', event => {
@@ -43,10 +43,26 @@ messagesBar.addEventListener('keypress', event => {
 })
 
 
-switch.addEventListener('change', function() {
+
+
+
+
+darkModeSwitch.addEventListener('change', function() {
+  let r = document.querySelector(':root') 
   if (this.checked) {
-    console.log("Checkbox is checked..");
+    console.log("lightmode");
+    r.style.setProperty('--body', '#ffffff');
+    r.style.setProperty('--scrolltrack', '#ffffff');
+    r.style.setProperty('--scrollthumb', '#ffffff');
+    r.style.setProperty('--time', '#f2f3f5');
+    r.style.setProperty('--profile-bottom', '#ffffff');
+    r.style.setProperty('--profile-name', '#313338');
+    
   } else {
-    console.log("Checkbox is not checked..");
+    console.log("darkmode");
+    r.style.setProperty('--body', '#ffffff');
+    r.style.setProperty('--scrolltrack', '#ffffff');
+    r.style.setProperty('--scrollthumb', '#ffffff');
+    r.style.setProperty('--time', '#f2f3f5');
   }
 });
