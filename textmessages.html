@@ -16,6 +16,15 @@
 <body>
     <div class="container">
         <div class="profile-container">
+                      <form action="" method="post" id="openai_info">
+
+  <input class="messagesbar" type="text" id="messagesbar" name="apikey" placeholder="OpenAI API Key"><hr>
+    <input class="messagesbar" type="text" id="organization" name="orgid" placeholder="OpenAI Organization"><br><br>
+                            <input class="messagesbar" type="text" id="testingprompt" name="prompt" placeholder="Testing Prompt"><br><br>
+
+    </form>
+<input id="generate" type="button" value="generate" onclick="getAIMessage();" />
+
           <div class="text">
           <p>DIRECT MESSAGES</p>
           </div>
@@ -55,6 +64,7 @@
 
         <!-- header -->
       <div class="right-side">
+
         <div class="headerbar">
           <div class="header">
             <img class="icon-img" src="res/icon.png">
