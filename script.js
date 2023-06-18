@@ -1,6 +1,6 @@
 const messagesContainer = document.getElementById("messages-container")
 const messagesBar = document.getElementById('messagesbar');
-const ding = new Audio("ding.mp3");
+const ding = new Audio("res/ding.mp3");
 const darkModeSwitch = document.getElementById("switch-check");
 
 
@@ -15,7 +15,7 @@ messagesBar.addEventListener('keypress', event => {
     messagesContainer.append(messages)
 
     const image = document.createElement('img')
-    image.src  = '/icon.png'
+    image.src  = 'res/icon.png'
     image.classList.add("icon-img")
     messages.append(image)
 
