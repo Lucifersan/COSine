@@ -2,7 +2,7 @@ const messagesContainer = document.getElementById("messages-container")
 const messagesBar = document.getElementById('messagesbar');
 const ding = new Audio("res/ding.mp3");
 const darkModeSwitch = document.getElementById("switch-check");
-let currLineIndex = 0;
+// let currLineIndex = 0;
 
 messagesBar.addEventListener('keypress', event => {
   if (event.keyCode == 13 && messagesBar.value.length != 0) {
@@ -46,44 +46,44 @@ messagesBar.addEventListener('keypress', event => {
   }
 })
 
-//im cooking smth up dont look -emily
-function playNextMessage() {
+// //im cooking smth up dont look -emily
+// function playNextMessage() {
     
-}
+// }
 
-function newMessage(messageText) {
-    const d = new Date();
-    let hour = d.getHours();
-    let minutes = d.getMinutes()
+// function newMessage(messageText) {
+//     const d = new Date();
+//     let hour = d.getHours();
+//     let minutes = d.getMinutes()
     
-    const messages = document.createElement('div');
-    messages.classList.add("messages")
-    messagesContainer.append(messages)
+//     const messages = document.createElement('div');
+//     messages.classList.add("messages")
+//     messagesContainer.append(messages)
 
-    const image = document.createElement('img')
-    image.src  = 'res/icon.png'
-    image.classList.add("icon-img")
-    messages.append(image)
+//     const image = document.createElement('img')
+//     image.src  = 'res/icon.png'
+//     image.classList.add("icon-img")
+//     messages.append(image)
 
-    const box = document.createElement("div")
-    messages.append(box)
+//     const box = document.createElement("div")
+//     messages.append(box)
     
-    const profileName = document.createElement('p');
-    profileName.classList.add("profile-name")
-    profileName.textContent = "Person 2 "
-    box.append(profileName)
+//     const profileName = document.createElement('p');
+//     profileName.classList.add("profile-name")
+//     profileName.textContent = "Person 2 "
+//     box.append(profileName)
     
-    const time = document.createElement("span");
-    time.classList.add("time")
-    time.textContent = `Today at ${hour}:${minutes}`
-    profileName.append(time)
+//     const time = document.createElement("span");
+//     time.classList.add("time")
+//     time.textContent = `Today at ${hour}:${minutes}`
+//     profileName.append(time)
     
-    const message = document.createElement('div');
-    message.classList.add(messageText);
-    message.textContent = messagesBar.value
-    box.append(message)
-    image.scrollIntoView(false);
-}
+//     const message = document.createElement('div');
+//     message.classList.add(messageText);
+//     message.textContent = messagesBar.value
+//     box.append(message)
+//     image.scrollIntoView(false);
+// }
 
 
 //so am i - anthony
